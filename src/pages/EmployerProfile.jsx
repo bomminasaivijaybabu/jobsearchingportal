@@ -26,7 +26,7 @@ const EmployerProfile = () => {
     }
 
     // Fetch employers data
-    fetch('http://localhost:3000/employers')
+    fetch('https://jobsearchinportaldata.onrender.com/employers')
       .then(res => res.json())
       .then(data => setEmployers(data))
       .catch(err => console.error('Error fetching employers:', err));
