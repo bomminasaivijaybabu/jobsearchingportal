@@ -20,8 +20,11 @@ const Home = ({ isLoggedIn }) => {
         throw new Error('Failed to fetch data');
       }
       const data = await response.json();
-      if (Array.isArray(data.mockJobsList)) {
-        setPostsList(data.mockJobsList);
+      console.log(data)
+      let p=Array.isArray(data)
+      console.log(p)
+      if (Array.isArray(data)) {
+        setPostsList(data);
       } else {
         throw new Error('Data format is incorrect');
       }
