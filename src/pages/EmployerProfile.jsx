@@ -53,7 +53,7 @@ const EmployerProfile = () => {
 
   const handleSave = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/employers/${id}`, {
+      const res = await fetch(`https://jobsearchinportaldata.onrender.com/employers/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, ...formData })
@@ -74,7 +74,7 @@ const EmployerProfile = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this employer?')) {
       try {
-        await fetch(`http://localhost:3000/employers/${id}`, {
+        await fetch(`https://jobsearchinportaldata.onrender.com/employers/${id}`, {
           method: 'DELETE',
         });
         setEmployers(prev => prev.filter(emp => emp.id !== id));
