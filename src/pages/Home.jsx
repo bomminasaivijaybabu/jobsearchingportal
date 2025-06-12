@@ -15,7 +15,7 @@ const Home = ({ isLoggedIn }) => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('/db.json');
+      const response = await fetch('https://jobsearchinportaldata.onrender.com/mockJobsList');
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
